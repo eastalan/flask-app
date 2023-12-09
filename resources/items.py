@@ -36,7 +36,7 @@ class Item(MethodView):
             abort(404,message = "item not found")
 
 
-@blp.route("/items")
+@blp.route("/item")
 class ItemList(MethodView):
     def get(self):
         return {"items":list(items.values())}
